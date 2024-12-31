@@ -1,0 +1,92 @@
+:root {
+  --bg-color: #324644;
+  --bg-opacity-color: rgb(50 70 68 / 70%);
+  --neon-light: #86fddc;
+  --section-border-radius: 1rem;
+  --white: #d1d1d1 ;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+  font-family: "Sixtyfour", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" -30;
+  text-align: center;
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-variation-settings: "BLED" 0, "SCAN" -10;
+  line-height: 125%;
+}
+
+img {
+  height: auto;
+}
+
+main.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.btn {
+  color: var(--white);
+  background: var(--bg-color);
+  padding: 1rem 2rem;
+  font-family: inherit;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  color: var(--bg-color);
+  background: var(--white);
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  padding: 3px;
+  background: repeating-linear-gradient(45deg, red, red 10px, var(--white) 10px, var(--white) 20px);
+  -webkit-mask: linear-gradient(var(--white), var(--white)) content-box, linear-gradient(var(--white), var(--white));
+  mask: linear-gradient(var(--white), var(--white)) content-box, linear-gradient(var(--white), var(--white));
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #091d1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color);
+  border-radius: 10px;
+}/*# sourceMappingURL=commons.css.map */

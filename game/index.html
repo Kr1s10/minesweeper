@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <section class="info-block">
+        <a class="btn" href="../">back</a>
+        <div>
+          <span>select level:</span>
+          <select id="levelSelect">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div>
+          <span>available flags: <span id="flagsCounter"></span></span>
+        </div>
+      </section>
+      <section class="game-block">
+        <img id="levelImage" src="../assets/img/1.png" alt="bg" />
+        <div id="gameBoard" class="board"></div>
+        <div class="again-popup">
+            <img src="../assets/img/sad-cat.gif" alt="sad-cat">
+        </div>
+            <div class="win-popup">
+        <img src="../assets/img/happy-cat.gif" alt="happy-cat">
+        </div>
+      </section>
+      <section class="progress-buttons">
+        <button class="btn" id="restartGame">try again</button>
+        <button class="btn" id="newGame">next level</button>
+      </section>
+    </main>
+  </body>
+  <script type="module" src="../assets/js/game.js"></script>
+</html>
