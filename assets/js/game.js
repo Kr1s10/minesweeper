@@ -203,7 +203,6 @@ levelSelector.addEventListener('change', (event) => changeLevel(+event.target.va
 
 function startGame() {
     initializeBoard();
-    console.log(board)
     renderBoard();
 }
 
